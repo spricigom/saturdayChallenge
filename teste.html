@@ -1,0 +1,16 @@
+<script>
+  let dinheiros = Number(prompt(`Quanto você possui para realizar a viagem?`));
+  if (isNaN(dinheiros)) {
+    alert(`Valor inválido! Informe novamente!`);
+    dinheiros = Number(prompt(`Quanto você possui para realizar a viagem?`));
+    if (isNaN(dinheiros)) {
+      alert(`Valor inválido! Informe novamente!`);
+      dinheiros = Number(prompt(`Quanto você possui para realizar a viagem?`));
+      if (isNaN(dinheiros)) {
+        alert(`O programa será finalizado! Excesso de tentativas!`);
+        ;
+      }
+    }
+  }
+  alert('oi');
+</script>

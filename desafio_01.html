@@ -4,7 +4,7 @@
     Um usuário deseja realizar uma viagem! A primeira pergunta que o programa deverá fazer é quanto que o usuário possui de "dinheiros" (R$) para realizar a viagem. Caso o usuário informe um dado inválido por 3 vezes consecutivas, o programa deverá ser encerrado.
     
     O programa também deverá perguntar ao usuário para qual região do Brasil ele deseja ir (Norte-NO, Nordeste-NE, Centro-Oeste-CO, Sudeste-SE, Sul-SU).
-
+;
     Considere que o usuário deverá digitar a sigla da região desejada. Caso ele digite uma sigla inválida, o programa deverá exibir uma mensagem de erro e perguntar novamente para qual região do Brasil ele deseja ir. Caso o usuário informar a região de forma incorreta por 3 vezes, o programa deverá ser encerrado.
     
     O programa também deverá perguntar qual a sua região de origem (Norte-NO, Nordeste-NE, Centro-Oeste-CO, Sudeste-SE, Sul-SU). Caso ele digite uma sigla inválida, o programa deverá exibir uma mensagem de erro e perguntar novamente qual a sua região de origem. Caso o usuário informar a região de forma incorreta por 3 vezes, o programa deverá ser encerrado.
@@ -14,7 +14,7 @@
     Caso o usuário informar uma região de origem e uma região de destino válidas, o programa deverá perguntar por quantos dias deseja ficar no destino. Caso o usuário informar um número de dias inválido, o programa deverá exibir uma mensagem de erro e perguntar novamente por quantos dias deseja ficar no destino. Caso o usuário informar o número de dias de forma incorreta por 3 vezes, o programa deverá ser encerrado.
 
     O programa deverá perguntar o valor da diária do hotel. Caso o usuário informar um valor inválido, o programa deverá exibir uma mensagem de erro e perguntar novamente o valor da diária do hotel. Caso o usuário informar o valor da diária de forma incorreta por 3 vezes, o programa deverá ser encerrado.
-
+Norte-NO, Nordeste-NE, Centro-Oeste-CO, Sudeste-SE, Sul-SU
     O programa deverá perguntar o valor da passagem de ida e volta. Caso o usuário informar um valor inválido, o programa deverá exibir uma mensagem de erro e perguntar novamente o valor da passagem de ida e volta. Caso o usuário informar o valor da passagem de ida e volta de forma incorreta por 3 vezes, o programa deverá ser encerrado.
 
     O programa deverá também perguntar se o usuário deseja alugar um carro. Caso responda positivamente, o programa deverá perguntar o valor do aluguel do carro. Caso o usuário informar um valor inválido, o programa deverá exibir uma mensagem de erro e perguntar novamente o valor do aluguel do carro. Caso o usuário informar o valor do aluguel do carro de forma incorreta por 3 vezes, o programa deverá ser encerrado.
@@ -32,4 +32,73 @@
 
     Informe ao usuário o valor total da viagem e a forma de pagamento escolhida. Pergunte se ele deseja parcelar o pagamento, sendo que o prazo máximo para pagar a diferneça é de 4 vezes. Caso o prazo informado pelo usuário seja inválido, o programa deverá exibir uma mensagem de erro e perguntar novamente o prazo para pagar a diferença. Informando um dado válido, o programa deverá exibir o valor total da viagem. Se for o caso, o programa deverá exibir o valor adicional a ser pago, correspondendo com a diferença que deverá custar além do que possui guardado. O programa também deverá mostrar a Forma de pagamento escolhida para pagar tal diferença e, se for o caso, o valor de cada parcela a ser paga.
     */
+
+
+    const reais = parseFloat(prompt(`Informe o quanto de dinheiro possui para realizar a viagem`).trim().replace(",","."));
+    const regiao = prompt(`Informe qual região do Brasil você viajará: Norte (NO), Nordeste (NE), Centro-Oeste-(CO), Sudeste-(SE) ou Sul-(SU)`).trim().toUpperCase();
+    const origem = prompt ("informe sua origem");
+
+    
+         if (regiao != "NO" && regiao != "NE" && regiao != "CO" && regiao != "SE" && regiao != "SU"){ 
+            const tentativa1 = prompt(`Você errou tente novamente:`)
+        }
+         if (regiao != "NO" && regiao != "NE" && regiao != "CO" && regiao != "SE" && regiao != "SU") {
+            const tentativa2 = prompt(`Você errou tente novamente, segunda chance:`);
+        }
+
+        if  (regiao != "NO" && regiao != "NE" && regiao != "CO" && regiao != "SE" && regiao != "SU") {
+            const tentativa3 = prompt(`Ultima tentativa:`);
+        }
+        if  (regiao != "NO" && regiao != "NE" && regiao != "CO" && regiao != "SE" && regiao != "SU") {
+            alert(`Programa encerrado`);
+            stop();
+        }
+        
+        let regiaoDestino = prompt(`Informe a região de destino: \n1 - Sul(SU) \n2 - Sudeste(SE) \n3 -  Centro-Oeste(CO) \n4 - Nordeste(NE) \n5 - Norte(NO)`);
+            if (regiaoDestino != "NO" && regiaoDestino != "NE" && regiaoDestino != "CO" && regiaoDestino != "SU" && regiaoDestino && regiaoDestino != "SE") {
+                alert(`Região inválida! Informe novamente!`)
+                regiaoDestino = prompt(`Informe a região do destino: \n1 - Sul(SU) \n2 - Sudeste(SE) \n3 - Centro-Oeste(CO) \n4 - Nordeste(NE) \n5 - Norte(NO)`);
+            }
+            if (origem != "NO" && origem != "NE" && origem != "CO" && origem != "SE" && origem != "SU"){ 
+            const tentativa1 = prompt(`Você errou tente novamente:`)
+        }
+         if (origem != "NO" && origem != "NE" && origem != "CO" && origem != "SE" && origem != "SU") {
+            const tentativa2 = prompt(`Você errou tente novamente, segunda chance:`);
+        }
+
+        if  (origem != "NO" && origem != "NE" && origem != "CO" && origem != "SE" && origem != "SU") {
+            const tentativa3 = prompt(`Ultima tentativa:`);
+        }
+        if  (origem != "NO" && origem != "NE" && origem != "CO" && origem != "SE" && origem != "SU") {
+            alert(`Programa encerrado`);
+            stop();
+        }
+        
+        if (origem == "SU" && regiao == "SE") {
+        alert(`Você poderá ir`);
+        }
+        if (origem == "SE" && regiao == "SU") {
+            alert(`Você poderá ir`);
+        }
+        if (origem == "CO" && regiao == "NO") {
+            alert(`Você poderá ir`);
+        }
+        if (origem == "NO" || origem ==  "NE" &&  regiao =="CO") {
+            alert(`Você poderá ir`);
+        }
+        if (origem == "NO" && regiao == "NE") {
+            alert(`Você poderá ir`);
+        }
+        if (origem == "NE" || origem == "SE" && regiao == "CO") {
+            alert(`Você poderá ir`);
+        }
+        if (origem == "CO" && regiao == "SE") {
+            alert(`Você poderá ir`);
+        }
+        else{
+            alert(`Você não pooderá ir`);
+        }
+        
+
+        
 </script>
