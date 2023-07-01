@@ -1,3 +1,1 @@
-# _Desconsiderar entrada, processamento e saída!_
-
-## **Bom desafio a todos!**
+# **Bom desafio a todos!**
