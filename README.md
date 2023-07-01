@@ -1,6 +1,6 @@
 # _Desconsiderar entrada, processamento e saída!_
 
-* Reunir equipe com no máximo 6 pessoas
+* Reunir equipe com no máximo 5 pessoas
 * Poderão ser equipes compostas por alunos de diferentes turmas
 * Cada equipe deverá escolher um problema para ser resolvido, sendo:
     * (1)Custo da Viagem
